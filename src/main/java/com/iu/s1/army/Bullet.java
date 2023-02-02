@@ -1,4 +1,4 @@
-package com.iu.s1;
+package com.iu.s1.army;
 
 import org.springframework.stereotype.Component;
 

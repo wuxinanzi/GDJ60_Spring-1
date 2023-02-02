@@ -5,21 +5,7 @@
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 
-	<!-- Bullet bullet = new Bullet() -->
-	<bean class="com.iu.s1.Bullet" id="bullet"></bean>
 
-	<!-- Soldier soldier = new Soldier() -->
-	<!-- Gun gun = new Gun() -->
-	<bean class="com.iu.s1.Gun" id="gun"></bean>
-	
-	<bean class="com.iu.s1.Soldier" id="soldier">
-		<!-- soldier.setGun(gun) -->
-		<!-- setter 이름은 set을 제외하고 첫글자를 소문자로 바꾼것 -->
-		<!-- getter 이름은 get을 제외하고 첫글자를 소문자로 바꾼것 -->
-		<property name="gun" ref="gun"></property>
-		<property name="age" value="10"></property>
-		<property name="name" value="winter"></property>
-	</bean>
 	
 		
 </beans>

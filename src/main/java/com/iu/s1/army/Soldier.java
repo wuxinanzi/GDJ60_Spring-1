@@ -1,12 +1,21 @@
-package com.iu.s1;
+package com.iu.s1.army;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Soldier {
 	
-	private Gun gun;
+//	@Autowired
+//	private Gun gun;
+	
+	@Autowired
+	@Qualifier("sg")
+	private Gun shotGun;
+	
+	
+	private Gun rifle;
 	
 	private String name;
 	private int age;
@@ -29,17 +38,5 @@ public class Soldier {
 		this.age = age;
 	}
 
-	public Gun getGun() {
-		return gun;
-	}
-
-	@Autowired
-	public void setGun(Gun gun) {
-		this.gun = gun;
-	}
-	
-	public void useGun() {
-		this.gun.trigger();
-	}
 
 }

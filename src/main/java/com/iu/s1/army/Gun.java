@@ -1,18 +1,19 @@
-package com.iu.s1;
+package com.iu.s1.army;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class Gun {
 	
+	@Autowired
 	private Bullet bullet;
 	
 	public Gun() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@Autowired
+	
 	public Gun(Bullet bullet) {
 		this.bullet = bullet;
 	}
