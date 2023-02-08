@@ -15,6 +15,7 @@
 	<h3>Detail : ${dto.bookDetail}</h3>
 	<h3>Rate : ${dto.bookRate}</h3>
 	<h3>Sale : ${dto.bookSale}</h3>
+	<a href="./delete?bookNum=${dto.bookNum}">상품삭제</a>
 	</c:if>
 	
 	<c:if test="${empty dto}">
