@@ -17,7 +17,7 @@ public class BankBookDAO {
 	}
 	
 	public BankBookDTO getBankBookDetail(BankBookDTO bankBookDTO)throws Exception{
-		return sqlSession.selectOne(NAMESPACE+"getBnakBookDetail", bankBookDTO);
+		return sqlSession.selectOne(NAMESPACE+"getBankBookDetail", bankBookDTO);
 	}
 	
 	public int setBankBookAdd(BankBookDTO bankBookDTO)throws Exception{

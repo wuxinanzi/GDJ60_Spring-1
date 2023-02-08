@@ -88,7 +88,7 @@ public class ProductDAO {
 	//getProductDetail
 	public ProductDTO getProductDetail(ProductDTO productDTO)throws Exception{
 		
-		return sqlSession.selectOne(NAMESPACE+"getProductDetail", productDTO);
+		return sqlSession.selectOne(NAMESPACE+"getProductDetail",productDTO);
 		
 	}
 	
