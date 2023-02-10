@@ -5,22 +5,36 @@
 <html>
 <head>
 	<title>Home</title>
+	<link rel="stylesheet" href="./resources/css/reset.css">
 	<link rel="stylesheet" href="./resources/css/main.css">
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
-<a href="./product/list?num=1&num=2&num=3" class="menu">ProductList</a>
-<a href="/product/list" class="menu">ProductList</a>
-<a href="/bankBook/list" class="menu">BankBookList</a>
-<a href="./bankBook/list" class="menu">BankBookList</a>
+	<header>
+		<div class="header_wrap">
+			<div class="header_logo">
+				<img src="/resources/images/logo.png" alt="">
+			</div>
+			<nav class="header_nav">
+				<ul>
+					<li><a href="#">공지사항</a></li>
+					<li><a href="#">제품</a></li>
+					<li><a href="#">저축상품</a></li>
+					<li><a href="#">기타메뉴</a></li>
+				</ul>
 
-<img alt="아이유이미지" src="/resources/images/iu.jpg">
-<img alt="윈터이미지" src="./resources/images/winter.jpg">
+			</nav>
+			<div class="header_sub">
+				<ul>
+					<li><a href="#">LOGIN</a></li>
+					<li><a href="#">JOIN</a></li>
+					<li><a href="#">KO</a></li>
+					<li><a href="#">EN</a></li>
+					<li><a href="#">JP</a></li>
+					<li><a href="#">CN</a></li>
+				</ul>
+			</div>
+		</div>
+	</header>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wMPwNfMD_Gk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
