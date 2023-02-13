@@ -33,7 +33,7 @@
 			  <label for="bookDetail" class="form-label">상세설명</label>
 			  <textarea name="bookDetail" class="form-control" id="bookDetail" placeholder="설명 입력" rows="7"></textarea>
 			</div>	
-	
+<!-- 	
 			<div class="mb-3">
 				<label class="form-label">판매여부</label>
 				<div class="form-check">
@@ -48,6 +48,11 @@
 				    판매중단
 				  </label>
 				</div>		
+			</div>
+	 -->		
+			<div class=" mb-3 form-check form-switch">
+			   <label class="form-check-label" for="bookSale">판매여부</label>
+			   <input name="bookSale" class="form-check-input" value="1" type="checkbox" role="switch" id="bookSale">
 			</div>
 			
 			<div class="mb-3">
