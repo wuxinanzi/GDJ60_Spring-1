@@ -26,5 +26,20 @@ public class MemberController {
 		mv.setViewName("redirect:../");
 		return mv;
 	}
+	
+	@RequestMapping(value = "memberLogin", method = RequestMethod.GET)
+	public ModelAndView getMemberLogin()throws Exception{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("member/memberLogin");
+		return mv;
+	}
+	
+	@RequestMapping(value = "memberLogin", method = RequestMethod.POST)
+	public ModelAndView getMemberLogin(MemberDTO memberDTO)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		memberDTO = memberService.getMemberLogin(memberDTO);
+		mv.setViewName("redirect:../");
+		return mv;
+	}
 
 }
