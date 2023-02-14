@@ -38,6 +38,10 @@
 	</div>
 </div>
 
+<div>
+	<h1>${member.name}</h1>
+</div>
+
 
 
 <c:import url="./template/common_js.jsp"></c:import>

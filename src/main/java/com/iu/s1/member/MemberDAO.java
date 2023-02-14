@@ -4,6 +4,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import oracle.net.aso.m;
+
 @Repository
 public class MemberDAO {
 	@Autowired
@@ -20,5 +22,9 @@ public class MemberDAO {
 	
 	public MemberDTO getMemberLogin(MemberDTO memberDTO)throws Exception{
 		return sqlSession.selectOne(NAMESPACE+"getMemberLogin", memberDTO);
+	}
+	
+	public int setMemberUpdate(MemberDTO memberDTO)throws Exception{
+		return sqlSession.update(NAMESPACE+"setMemberUpdate", memberDTO);
 	}
 }

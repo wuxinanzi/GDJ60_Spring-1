@@ -15,7 +15,13 @@
   	</insert>
   	
   	<select id="getMemberLogin" parameterType="MemberDTO" resultType="MemberDTO">
-  		SELECT * FROM BANKMEMBERS WHERE ID=#{id} AND PW=#{pw}
+  		SELECT ID FROM BANKMEMBERS WHERE ID=#{id} AND PW=#{pw}
   	</select>
+  	
+ 	<update id="setMemberUpdate" parameterType="MemberDTO">
+		Update BANKMEMBERS SET NAME=#{name},PHONE=#{phone},EMAIL=#{email}
+		WHERE ID=#{id}
+	</update> 	
+  	
   	
   </mapper>
