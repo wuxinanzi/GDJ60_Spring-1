@@ -7,6 +7,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/common_css.jsp"></c:import>
+
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
@@ -56,7 +57,7 @@
 			</div>
 			
 			<div class="mb-3">
-				<button class="btn btn-outline-success" type="submit">등록</button>
+				<button class="my btn btn-danger" type="submit">등록</button>
 			</div>
 		
 		</form>
