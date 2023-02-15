@@ -6,8 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<c:import url="../template/common_css.jsp"></c:import>
 </head>
 <body>
+<c:import url="../template/header.jsp"></c:import>
 	<h1>Detail Page</h1>
 	<c:if test="${not empty dto}">
 	<h3>Num  : ${dto.bookNum}</h3>
@@ -23,6 +25,6 @@
 	</c:if>
 	<a href="./update?bookNum=${dto.bookNum}">상품수정</a>
 	<a href="./list">목록으로</a>
-	
+<c:import url="../template/common_js.jsp"></c:import>	
 </body>
 </html>
