@@ -15,7 +15,7 @@
   	</insert>
   	
   	<select id="getMemberLogin" parameterType="MemberDTO" resultType="MemberDTO">
-  		SELECT ID FROM BANKMEMBERS WHERE ID=#{id} AND PW=#{pw}
+  		SELECT * FROM BANKMEMBERS WHERE ID=#{id}
   	</select>
   	
  	<update id="setMemberUpdate" parameterType="MemberDTO">
