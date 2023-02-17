@@ -52,9 +52,33 @@
 	</select>
 	
  	
- 	<select id="getBankBookDetail" parameterType="BankBookDTO" resultType="BankBookDTO">
- 		SELECT * FROM BANKBOOK WHERE BOOKNUM=#{bookNum}
+ 	<select id="getBankBookDetail" parameterType="BankBookDTO" resultMap="bankBookDetailResult">
+ 		SELECT B.*, BI.*
+		FROM BANKBOOK B
+			 LEFT OUTER JOIN
+			 BANKBOOKIMG BI
+			 ON (B.BOOKNUM = BI.BOOKNUM)
+		WHERE B.BOOKNUM	=#{bookNum}
  	</select>
+ 	
+ 	<resultMap type="BankBookDTO" id="bankBookDetailResult">
+ 		<!-- Primary key -->
+ 		<id column="BOOKNUM" property="bookNum"/>
+ 		<!-- 그외 나머지 -->
+ 		<result column="BOOKNAME" property="bookName"/>
+ 		<result column="BOOKDETAIL" property="bookDetail"/>
+ 		<result column="BOOKRATE" property="bookRate"/>
+ 		<result column="BOOKSALE" property="bookSale"/>
+ 		<!-- 1:1 -->
+ 		<association property="bankBookImgDTO" javaType="BankBookImgDTO">
+ 			<id column="FILENUM" property="fileNum"/>
+ 			<result column="FILENAME" property="fileName"/>
+ 			<result column="ORINAME" property="oriName"/>
+ 		</association>
+ 		<!-- 1:N -->
+ 		<!-- <collection property=""></collection> -->
+ 		
+ 	</resultMap>
 
  	<insert id="setBankBookAdd" parameterType="BankBookDTO">
  		<selectKey keyProperty="bookNum" resultType="Long" order="BEFORE">
