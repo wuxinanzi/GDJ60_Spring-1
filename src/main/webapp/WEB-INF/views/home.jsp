@@ -11,7 +11,7 @@
 <body>
 <!-- 서버 내부 주소, 상대경로 -->
 <c:import url="./template/header.jsp"></c:import>
-
+<h1>학원에서 작성</h1>
 <div class="container-fluid my-5">
 	<div class="row col-md-6 offset-md-3">
 		<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
