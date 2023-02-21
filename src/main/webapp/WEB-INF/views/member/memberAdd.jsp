@@ -15,15 +15,23 @@
 		<h1 class="col-md-6 text-center fw-bold">MemberJoin Page</h1>
 	</div>
 	<div class = "row justify-content-center">
-		<form class="col-md-6" action="./memberJoin" method="post">
+		<form class="col-md-6" id="frm" action="./memberAdd" method="post">
 		<div class="mb-3">
 			<label for="id" class="form-label fw-bold">아이디</label> 
 			<input type="text" name="id" class="form-control" id="id" placeholder="아이디 입력">
+			<div id="idResult"></div>
 		</div>
 		
 		<div class="mb-3">
 			<label for="pw" class="form-label fw-bold">비밀번호</label> 
 			<input type="password" name="pw" class="form-control" id="pw" placeholder="비밀번호 입력">
+			<div id="pwResult"></div>
+		</div>
+
+		<div class="mb-3">
+			<label for="pw" class="form-label fw-bold">비밀번호</label> 
+			<input type="password" name="pw" class="form-control" id="pwCheck" placeholder="비밀번호 입력">
+			<div id="pwCheckResult"></div>
 		</div>
 		
 		<div class="mb-3">
@@ -43,11 +51,12 @@
 
 		
 		<div class="mb-3">
-				<button class="btn btn-outline-success fw-bold" type="submit">등록</button> 
+				<button class="btn btn-outline-success fw-bold" id="btn" type="button">등록</button> 
 		</div>
 		</form>
 	</div>
 </div>
+<script src="../resources/js/memberAdd.js"></script>
 <c:import url="../template/common_js.jsp"></c:import>
 </body>
 </html>
