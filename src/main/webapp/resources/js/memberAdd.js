@@ -22,12 +22,16 @@ let checks = [false, false, false, false]
 // ID 검증
 id.addEventListener("blur", function(){
     if(id.value.length != 0){
-        idResult.innerHTML="";
+        idResult.innerHTML="정상적인 ID";
         //idCheck=true;
         checks[0]=true;
+        idResult.classList.add("blueResult");
+        idResult.classList.remove("redResult");
     }else {
         idResult.innerHTML='ID는 필수 사항 입니다';
         checks[0]=false;
+        idResult.classList.add("redResult");
+        idResult.classList.remove("blueResult");
     }
 });
 

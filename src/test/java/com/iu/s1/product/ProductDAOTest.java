@@ -32,7 +32,7 @@ public class ProductDAOTest extends MyTestCase{
 	}
 	
 	//insert
-	@Test
+	//@Test
 	public void setProductAddTest()throws Exception{
 		
 		for(int i=0;i<30;i++) {

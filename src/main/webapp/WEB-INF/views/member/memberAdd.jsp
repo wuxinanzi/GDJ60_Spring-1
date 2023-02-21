@@ -7,6 +7,16 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <c:import url="../template/common_css.jsp"></c:import>
+<style>
+	.redResult{
+		color: red;
+	}
+
+	.blueResult {
+		color: blue;
+	}
+
+</style>
 </head>
 <body>
 <c:import url="../template/header.jsp"></c:import>
@@ -19,7 +29,7 @@
 		<div class="mb-3">
 			<label for="id" class="form-label fw-bold">아이디</label> 
 			<input type="text" name="id" class="form-control" id="id" placeholder="아이디 입력">
-			<div id="idResult"></div>
+			<div id="idResult" class=""></div>
 		</div>
 		
 		<div class="mb-3">
