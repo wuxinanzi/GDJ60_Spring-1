@@ -1,4 +1,4 @@
-package com.iu.s1.board.notice;
+package com.iu.s1.board.qna;
 
 import java.util.List;
 
@@ -12,24 +12,24 @@ import com.iu.s1.board.BoardService;
 import com.iu.s1.util.Pager;
 
 @Service
-public class NoticeService implements BoardService {
-	
+public class QnaService implements BoardService {
 	@Autowired
-	private BbsDAO noticeDAO;
+	private BbsDAO qnaDAO;
 
 	@Override
 	public List<BbsDTO> getBoardList(Pager pager) throws Exception {
 		pager.makeRow();
 		
-		pager.makeNum(noticeDAO.getTotalCount(pager));
+		pager.makeNum(qnaDAO.getTotalCount(pager));
 		
-		return noticeDAO.getBoardList(pager);
+		return qnaDAO.getBoardList(pager);
+		
 	}
 
 	@Override
 	public int setBoardAdd(BbsDTO bbsDTO) throws Exception {
-		
-		return noticeDAO.setBoardAdd(bbsDTO);
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
