@@ -50,7 +50,7 @@ public class NoticeDAO implements BoardDAO {
 	@Override
 	public BoardDTO getBoardDetail(BoardDTO boardDTO) throws Exception {
 		// TODO Auto-generated method stub
-		return null;
+		return sqlSession.selectOne(NAMESPACE+"getBoardDetail", boardDTO);
 	}
 
 }

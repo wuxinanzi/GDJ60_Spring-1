@@ -19,7 +19,8 @@
 	</div>
 	
 	<div class="row justify-content-center my-4">
-		<form class="col-md-7" action="./add" method="post" enctype="multipart/form-data">
+		<form class="col-md-7" action="./reply" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="num" value="${boardDTO.num}">
 			<div class="mb-3">
 			  <label for="writer" class="form-label">작성자</label>
 			  <input type="text" name="writer" class="form-control" id="writer">
@@ -35,13 +36,13 @@
 			  <textarea name="contents" class="form-control" id="contents" placeholder="내용 입력" rows="7"></textarea>
 			</div>
 			
-			<div id="fileList" class="my-5">
- 				<div class="input-group mb-3">
-					<input type="file" class="form-control" id="files" name="files">
-					<button type="button" class="btn btn-outline-danger">X</button>
-				</div> 
-				<button type="button" class="btn btn-primary" id="fileAdd">ADD</button>
-			</div>
+			<!-- <div id="fileList">
+				<div class="mb-3">
+				<label for="files" class="form-label">Image</label>
+				<input type="file" class="form-control" id="files" name="pic">
+				</div>
+				<button type="button" id="fileAdd">ADD</button>
+			</div> -->
 						
 			<div class="mb-3">
 				<button class="my btn btn-danger" type="submit">글쓰기</button>
@@ -53,8 +54,8 @@
 
 <script src="../resources/js/fileManger.js"></script>
 <script>
-	setMax(5);
-	setParam('files');
+	setMax(3);
+	// setParam('f');
 </script>
 <c:import url="../template/common_js.jsp"></c:import>
 </body>
