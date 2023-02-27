@@ -9,6 +9,9 @@ public interface BoardDAO extends BbsDAO {
 	
 	//add
 	
+	//fileAdd
+	public int setBoardFileAdd(BoardFileDTO boardFileDTO)throws Exception;
+	
 	//update
 	
 	//delete

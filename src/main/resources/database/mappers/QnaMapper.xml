@@ -48,6 +48,11 @@
   		VALUES(#{num}, #{title}, #{contents}, #{writer}, sysdate,0, #{num}, 0, 0)
   	</insert>
   	
+  	<insert id="setBoardFileAdd" parameterType="BoardFileDTO">
+  		INSERT INTO QNAFILES (FILENUM, NUM, FILENAME, ORINAME)
+  		VALUES(QNA_SEQ.NEXTVAL ,#{num}, #{fileName}, #{oriName})
+  	</insert>
+  	
   	<update id="setStepUpdate" parameterType="QnaDTO">
   		UPDATE QNA SET STEP = STEP + 1
   		WHERE REF = #{ref} AND STEP > #{step}
