@@ -102,5 +102,25 @@ public class QnaController {
 		mv.addObject("url", "./detail?num="+qnaDTO.getNum());
 		return mv;
 	}
+	
+	@PostMapping("delete")
+	public ModelAndView setBoardDelete(BbsDTO bbsDTO, HttpSession session)throws Exception{
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("common/result");
+		
+		int result = qnaService.setBoardDelete(bbsDTO, session);
+		
+		String message="삭제 실패";
+		
+		if(result>0) {
+			message="삭제 성공";
+		}
+		
+		mv.addObject("result", message);
+		mv.addObject("url", "./list");
+		
+		
+		return mv;
+	}
 
 }
