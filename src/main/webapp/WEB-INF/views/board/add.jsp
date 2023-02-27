@@ -36,10 +36,10 @@
 			</div>
 			
 			<div id="fileList" class="my-5">
- 				<div class="input-group mb-3">
+<!--  				<div class="input-group mb-3">
 					<input type="file" class="form-control" id="files" name="files">
 					<button type="button" class="btn btn-outline-danger">X</button>
-				</div> 
+				</div>  -->
 				<button type="button" class="btn btn-primary" id="fileAdd">ADD</button>
 			</div>
 						
