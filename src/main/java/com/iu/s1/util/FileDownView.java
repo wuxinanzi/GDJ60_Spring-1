@@ -65,19 +65,6 @@ public class FileDownView extends AbstractView {
 		//자원 해제
 		os.close();
 		fi.close();
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 	}
 
 }
